@@ -22,7 +22,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['101.132.74.63']
+ALLOWED_HOSTS = [*]
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -32,7 +32,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysite_db',
         'USER': 'zqs_blog',
-        'PASSWORD': 'DATABASE_PASSWORD',
+        'PASSWORD': DATABASE_PASSWORD,
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -45,7 +45,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'zqs970313@163.com'
-EMAIL_HOST_PASSWORD = 'os.environ[EMAIL_HOST_PASSWORD]' #授权码
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] #授权码
 EMAIL_SUBJECT_PREFIX = '[二哈的博客]'
 EMAIL_USE_SSL = True #与SMYP服务器通信时，是否启动TLS链接（安全链接）
 

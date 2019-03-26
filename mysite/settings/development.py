@@ -35,17 +35,17 @@ DATABASES = {
     }
 }
 '''
-DATABASE_PASSWORD = os.environ['DATABASE_PASSWORD']
+
 DATABASES = {
-    'default': 
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysite_db',
         'USER': 'zqs_blog',
-        'PASSWORD': 'DATABASE_PASSWORD',
+        'PASSWORD': 'zqs1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }
-
+}
 #发送邮件位置
 #https://docs.djangoproject.com/2.0/ref/settings/#email
 #https://docs.djangoproject.com/2.0/topics/email/
@@ -53,6 +53,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'zqs970313@163.com'
-EMAIL_HOST_PASSWORD = 'os.environ[EMAIL_HOST_PASSWORD]' #授权码
+EMAIL_HOST_PASSWORD = 'ZENGqing7486' #授权码
 EMAIL_SUBJECT_PREFIX = '[二哈的博客]'
 EMAIL_USE_TLS = True #与SMYP服务器通信时，是否启动TLS链接（安全链接）
