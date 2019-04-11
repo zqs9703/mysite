@@ -1,5 +1,5 @@
 db.sqlite3
-__pycache__/
 static_collected
 manage.py
+__pycache__/
 settings/
